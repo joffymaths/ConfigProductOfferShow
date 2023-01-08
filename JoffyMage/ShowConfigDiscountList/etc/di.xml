@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+<!--  for swatch change discount change  -->
+    <type name="Magento\ConfigurableProduct\Block\Product\View\Type\Configurable">
+        <plugin name="joffymage_showconfigdiscountlist_product_block" type="JoffyMage\ShowConfigDiscountList\Plugin\Product\View\Type\ConfigurablePlugin" sortOrder="1" />
+    </type>
+    <type name="Magento\ConfigurableProduct\Model\Product\Type\Configurable">
+        <plugin name="joffymage_showconfigdiscountlist_product_model" type="JoffyMage\ShowConfigDiscountList\Plugin\Product\Type\ConfigurablePlugin" sortOrder="1" />
+    </type>
+</config>

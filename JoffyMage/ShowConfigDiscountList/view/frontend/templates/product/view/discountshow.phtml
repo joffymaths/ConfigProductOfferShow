@@ -1,0 +1,21 @@
+<?php
+$customHelperData = $this->helper(\JoffyMage\ShowConfigDiscountList\Helper\Data::class);
+$currentPrd = $customHelperData->getCurrentProduct();
+if ($currentPrd->getTypeId() == "configurable") {
+    $discountVal = $customHelperData->getDiscount($currentPrd, 'groupName');
+    if ($discountVal) { ?>
+        <div class="product-label-main">
+            <div class="product-label-div" >
+                <div class='page-discount-wrapper product'>
+                    <span class='page-discount'>
+                        <span class='base' data-ui-id='page-discount-wrapper' itemprop='discount' style="display: block;font-size: 35px;font-weight: 600;">
+                            <?php echo $discountVal."%"; ?>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+}
+?>
